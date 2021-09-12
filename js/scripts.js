@@ -8,17 +8,6 @@ var pilha = [];
 
 function getRandomInt(min, max){ return Math.floor(Math.random() * (max - min + 1)) + min; }
 
-$(document).on('mousemove', function( event ) {
-  posX = event.pageX;
-  posY = event.pageY;
-})
-
-for(var i = 0; i < tamanhoTela; i++)
-{
-  var rain = $('<div class="rainbow"/>').css('left', i*9+'px');
-  $('body').append(rain);
-}
-rainbow = $('.rainbow');
 
 function criarEstrela()
 {
@@ -73,17 +62,3 @@ function peidaArcoIris()
   }
 }
 
-window.setInterval(function(){
-  moveNyan();
-  peidaArcoIris();
-}, 10);
-
-window.setInterval(function(){ criarEstrela(); }, 300);
-
-window.setInterval(function(){ an = !an; }, 500);
-
-var frame = 0;
-window.setInterval(function(){   
-  nyan.css({'background-position': 34*frame+'px'});
-  frame++;
-}, 100);
