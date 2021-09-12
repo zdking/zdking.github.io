@@ -19,6 +19,11 @@ $(document).on("mousemove", function (event) {
   posY = event.pageY;
 });
 
+document.addEventListener('touchmove', function(e) {
+    posX = e.pageX;
+    posY = e.pageY;
+}, false)
+
 for (var i = 0; i < tamanhoTela; i++) {
   var rain = $('<div class="rainbow"/>').css("left", i * 9 + "px");
   $("body").append(rain);
