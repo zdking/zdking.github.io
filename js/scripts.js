@@ -14,16 +14,10 @@ function getRandomInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-$(document).on("mousemove", function (event) {
+$(document).on("mousemove touchstart touchmove", function (event) {
   posX = event.pageX;
   posY = event.pageY;
 });
-
-document.addEventListener('touchmove', function(e) {
-    e.preventDefault();
-    posX = e.touches[0].pageX;
-    posY = e.touches[0].pageY;
-}, false)
 
 for (var i = 0; i < tamanhoTela; i++) {
   var rain = $('<div class="rainbow"/>').css("left", i * 9 + "px");
