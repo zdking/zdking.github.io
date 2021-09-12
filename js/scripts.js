@@ -15,6 +15,7 @@ function getRandomInt(min, max) {
 }
 
 $(document).on("mousemove touchstart touchmove", function (event) {
+  event.preventDefault();
   posX = event.pageX;
   posY = event.pageY;
 });
