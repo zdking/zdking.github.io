@@ -1,10 +1,4 @@
-var posX = 100, posY = 100, px = 0, py = 0, an = false;
-var nyan = $('.nyan');
-var rainbow = null;
-var altura = 800;
-var largura = parseInt($('body').width());
-var tamanhoTela = parseInt(largura/9);
-var pilha = [];
+
 
 function getRandomInt(min, max){ return Math.floor(Math.random() * (max - min + 1)) + min; }
 
