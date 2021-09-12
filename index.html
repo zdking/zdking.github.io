@@ -15,5 +15,35 @@
 <body>
   <div class="nyan"></div>
   <script src="js/scripts.js"></script>
+  <script>
+    $(document).on('mousemove', function( event ) {
+      posX = event.pageX;
+      posY = event.pageY;
+    })
+
+    for(var i = 0; i < tamanhoTela; i++)
+    {
+      var rain = $('<div class="rainbow"/>').css('left', i*9+'px');
+      $('body').append(rain);
+    }
+    rainbow = $('.rainbow');
+
+
+    window.setInterval(function(){
+      moveNyan();
+      peidaArcoIris();
+    }, 10);
+
+    window.setInterval(function(){ criarEstrela(); }, 300);
+
+    window.setInterval(function(){ an = !an; }, 500);
+
+    var frame = 0;
+    window.setInterval(function(){   
+      nyan.css({'background-position': 34*frame+'px'});
+      frame++;
+    }, 100);
+
+  </script>
 </body>
 </html>
