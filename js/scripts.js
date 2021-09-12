@@ -20,8 +20,9 @@ $(document).on("mousemove", function (event) {
 });
 
 document.addEventListener('touchmove', function(e) {
-    posX = e.pageX;
-    posY = e.pageY;
+    e.preventDefault();
+    posX = e.touches[0].pageX;
+    posY = e.touches[0].pageY;
 }, false)
 
 for (var i = 0; i < tamanhoTela; i++) {
