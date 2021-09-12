@@ -3,6 +3,7 @@ body{background:#0f4d8f;}
   z-index:10;
   position:absolute;
   width:34px;height:33px;
+  touch-action: none;
 }
 .rainbow{position:absolute;width:9px;height:18px;margin-top:6px;z-index:5;}
 .star{width:7px;height:7px;position:absolute;z-index:1;-webkit-background-size: 100% 100%;}
