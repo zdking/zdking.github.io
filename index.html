@@ -16,6 +16,13 @@
   <div class="nyan"></div>
   <script src="js/scripts.js"></script>
   <script>
+    var posX = 100, posY = 100, px = 0, py = 0, an = false;
+    var nyan = $('.nyan');
+    var rainbow = null;
+    var altura = 800;
+    var largura = parseInt($('body').width());
+    var tamanhoTela = parseInt(largura/9);
+    var pilha = [];
     $(document).on('mousemove', function( event ) {
       posX = event.pageX;
       posY = event.pageY;
